@@ -11,9 +11,17 @@ const generate = () => {
         let response = xhr.response
         let responseParseToJson = JSON.parse(response)
 
-        document.getElementsByClassName('card__img')[0].src = responseParseToJson.photo
-        document.getElementsByClassName('card__author')[0].innerHTML = responseParseToJson.author
-        document.getElementById('quote').innerHTML = responseParseToJson.quote
+        if (xhr.status === 200) {
+
+            document.getElementsByClassName('card__img')[0].src = responseParseToJson.photo
+            document.getElementsByClassName('card__author')[0].innerHTML = responseParseToJson.author
+            document.getElementById('quote').innerHTML = responseParseToJson.quote
+
+        } else {
+
+            console.log(`Error, connexion cant be established`)
+        }
+
     }
 
     xhr.open('GET', 'https://thatsthespir.it/api', true)
