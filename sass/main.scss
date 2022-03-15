@@ -1,0 +1,51 @@
+body {
+  background-color: #F8F5F2;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  padding: 20px 0;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  box-shadow: 0 0 10px 1px #000000;
+  border-radius: 10px;
+
+  &__img {
+    width: 350px;
+    max-height: 500px;
+    background-size: cover;
+  }
+
+  &__author {
+    font-size: 2.2em;
+    text-align: center;
+  }
+
+  #quote {
+    width: 95%;
+    font-size: 1.3em;
+    font-style: italic;
+    text-align: center;
+  }
+}
+
+#button {
+  background-color: #F8F5F2;
+  margin-top: 30px;
+  width: 100px;
+  height: 35px;
+  font-size: .9em;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 1px #000000;
+
+  &:hover {
+    background-color: #fff;
+  }
+}
